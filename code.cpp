@@ -128,7 +128,7 @@ bool evalCond(const Cond &c, const Table &t, const vector<string> &row) {
 // Parse CREATE TABLE
 void handleCreate(const vector<string> &toks) {
     // "CREATE" "TABLE" name "(" col TYPE , ... ")"
-    if (toks.size() < 6) { cout << "Syntax error in CREATE\n"; return; }
+    if (toks.size() < 7) { cout << "Syntax error in CREATE\n"; return; }
     string name = toks[2];
     if (db.count(name)) { cout << "Table already exists\n"; return; }
     int i = 3;
